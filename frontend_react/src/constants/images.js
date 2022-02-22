@@ -36,7 +36,10 @@ import nb from "../assets/nb.png";
 import skype from "../assets/skype.png";
 import spotify from "../assets/spotify.png";
 
+// const  images = {
 export default {
+  adidas,
+  amazon,
   email,
   mobile,
   api,
@@ -46,14 +49,15 @@ export default {
   flutter,
   git,
   graphql,
-  html,
   javascript,
-  mu5,
+  html,
   node,
+  mu5,
   python,
-  react,
   redux,
+  laravel,
   sass,
+  react,
   typescript,
   vue,
   about01,
@@ -63,12 +67,11 @@ export default {
   profile,
   circle,
   logo,
-  adidas,
-  amazon,
   asus,
   bolt,
-  nb,
   skype,
+  nb,
   spotify,
-  laravel,
 };
+
+// export default images;
