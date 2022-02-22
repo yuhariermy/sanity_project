@@ -1,40 +1,40 @@
 import React, { useState, useEffect } from "react";
+// import React from "react";
 import { motion } from "framer-motion";
 
-// import { AppWrap, MotionWrap } from "../../wrapper";
+import { AppWrap, MotionWrap } from "../../wrapper";
 import "./About.scss";
-// import { images } from "../../constants";
-import { urlFor } from "../../client";
-// import { urlFor, client } from "../../client";
+import { images } from "../../constants";
+// import { urlFor } from "../../client";
+import { urlFor, client } from "../../client";
 
-// const abouts = [
-//   {
-//     title: "Web Application Development",
-//     description: "Making a Great Website",
-//     imgUrl: images.about01,
-//   },
-//   {
-//     title: "Back End Developer",
-//     description: "A Great Website Based On The Fantastic Back End",
-//     imgUrl: images.about02,
-//   },
-//   {
-//     title: "Laravel Developer",
-//     description: "Making a Great Website",
-//     imgUrl: images.about03,
-//   },
-// ];
+const abouts = [
+  {
+    title: "Web Application Development",
+    description: "Making a Great Website",
+    imgUrl: images.about01,
+  },
+  {
+    title: "Back End Developer",
+    description: "A Great Website Based On The Fantastic Back End",
+    imgUrl: images.about02,
+  },
+  {
+    title: "Laravel Developer",
+    description: "Making a Great Website",
+    imgUrl: images.about03,
+  },
+];
 
 const About = () => {
-  const [abouts, setAbouts] = useState([]);
+  // const [abouts, setAbouts] = useState([]);
+  // useEffect(() => {
+  //   const query = '*[_type == "abouts"]';
 
-  //   useEffect(() => {
-  //     const query = '*[_type === "abouts"]';
-
-  //     client.fetch(query).then((response) => {
-  //       setAbouts(response);
-  //     });
-  //   }, []);
+  //   client.fetch(query).then((data) => {
+  //     setAbouts(data);
+  //   });
+  // }, []);
 
   return (
     <>
@@ -52,8 +52,9 @@ const About = () => {
             className="app__profile-item"
             key={about.title + index}
           >
-            <img src={urlFor(about.imgUrl)} alt={about.title} />
-            {/* <img src={about.imgUrl} alt={about.title} /> */}
+            {/* <img src={urlFor(about.imgUrl)} alt={about.title} /> */}
+            <img src={about.imgUrl} alt={about.title} />
+            {/* <img src={urlFor(about.imgUrl)} alt={about.title} /> */}
             <h2 className="bold-text" style={{ marginTop: 20 }}>
               {about.title}
             </h2>
@@ -67,10 +68,10 @@ const About = () => {
   );
 };
 
-export default About;
+// export default About;
 
-// export default AppWrap(
-//   MotionWrap(About, "app__about"),
-//   "about",
-//   "app__whitebg"
-// );
+export default AppWrap(
+  MotionWrap(About, "app__about"),
+  "about",
+  "app__whitebg"
+);
