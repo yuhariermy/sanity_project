@@ -4,7 +4,7 @@
   flex-direction: column;
 }
 
-.app_profiles {
+.app__profiles {
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -25,5 +25,14 @@
     height: 170px;
     border-radius: 15px;
     object-fit: cover;
+  }
+
+  @media screen and (min-width: 2000px) {
+    width: 370px;
+    margin: 2rem 4rem;
+
+    img {
+      height: 320px;
+    }
   }
 }
