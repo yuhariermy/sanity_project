@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { images } from "../../constants";
+import { AppWrap } from "../../wrapper";
 
 import "./Header.scss";
 
@@ -57,16 +58,24 @@ const Header = () => {
         whileInView={scaleVariants.whileInView}
         className="app__header-circles"
       >
-        {[images.javascript, images.laravel, images.sass].map(
-          (circle, index) => (
-            <div className="circle-cmp app__flex" key={`circle-${index}`}>
-              <img src={circle} alt="circle" />
-            </div>
-          )
-        )}
+        {[
+          images.javascript,
+          images.laravel,
+          images.sass,
+          images.css,
+          images.graphql,
+          images.redux,
+          images.vue,
+          images.react,
+        ].map((circle, index) => (
+          <div className="circle-cmp app__flex" key={`circle-${index}`}>
+            <img src={circle} alt="circle" />
+          </div>
+        ))}
       </motion.div>
     </div>
   );
 };
 
-export default Header;
+// export default Header;
+export default AppWrap(Header, "home");
