@@ -30,7 +30,6 @@ const Skills = () => {
 
       <div className="app__skills-container">
         <motion.div className="app__skills-list">
-          {console.log("here", skills)}
           {skills.map((skill) => (
             <motion.div
               whileInView={{ opacity: [0, 1] }}
@@ -63,7 +62,6 @@ const Skills = () => {
                 <motion.div className="app__skills-exp-works">
                   {experience.works.map((work, index) => (
                     <>
-                      {/* {console.log("here", work.name)} */}
                       <motion.div
                         whileInView={{ opacity: [0, 1] }}
                         transition={{ duration: 0.5 }}
