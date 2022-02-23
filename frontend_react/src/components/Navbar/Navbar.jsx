@@ -13,10 +13,12 @@ const Navbar = () => {
         <img src={images.logo} alt="logo" />
       </div>
       <ul className="app__navbar-links">
-        {["Home", "Work", "Skills", "Contact", "About"].map((item) => (
+        {["home", "work", "skills", "contact", "about"].map((item, index) => (
           <li key={`link-${item}`} className="app__flex p-text">
             <div />
-            <a href={`#${item}`}>{item}</a>
+            <a href={`#${item}`} key={item + index}>
+              {item}
+            </a>
           </li>
         ))}
       </ul>
@@ -29,7 +31,7 @@ const Navbar = () => {
           >
             <HiX onClick={() => setToogle(false)} />
             <ul>
-              {["Home", "Work", "Skills", "Contact", "About"].map((item) => (
+              {["home", "work", "skills", "contact", "about"].map((item) => (
                 <li key={item}>
                   <a href={`#${item}`} onClick={() => setToogle(false)}>
                     {item}
