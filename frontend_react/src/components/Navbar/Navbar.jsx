@@ -9,9 +9,11 @@ const Navbar = () => {
   const [toogle, setToogle] = useState(false);
   return (
     <nav className="app__navbar">
-      <a href="#home">
-        <img src={images.logo} alt="logo" />
-      </a>
+      <div className="app__navbar-logo">
+        <a href="#home">
+          <img src={images.logo} alt="logo" />
+        </a>
+      </div>
       <ul className="app__navbar-links">
         {["home", "work", "skills", "contact", "about"].map((item, index) => (
           <li key={`link-${item}`} className="app__flex p-text">
