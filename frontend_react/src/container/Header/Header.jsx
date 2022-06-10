@@ -61,12 +61,13 @@ const Header = () => {
         {[
           images.javascript,
           images.laravel,
+          images.node,
+          images.MySQL,
+          images.Go,
           images.sass,
-          images.css,
-          images.graphql,
           images.redux,
-          images.vue,
           images.react,
+          // images.vue,
         ].map((circle, index) => (
           <div className="circle-cmp app__flex" key={`circle-${index}`}>
             <img src={circle} alt="circle" />

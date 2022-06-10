@@ -35,6 +35,8 @@ import bolt from "../assets/bolt.png";
 import nb from "../assets/nb.png";
 import skype from "../assets/skype.png";
 import spotify from "../assets/spotify.png";
+import MySQL from "../assets/MySQL.png";
+import Go from "../assets/Go.png";
 
 const images = {
   // export default {
@@ -72,6 +74,8 @@ const images = {
   skype,
   nb,
   spotify,
+  MySQL,
+  Go,
 };
 
 export default images;
