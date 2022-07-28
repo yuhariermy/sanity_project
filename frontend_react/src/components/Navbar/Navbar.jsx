@@ -15,14 +15,16 @@ const Navbar = () => {
         </a>
       </div>
       <ul className="app__navbar-links">
-        {["home", "work", "skills", "contact", "about"].map((item, index) => (
-          <li key={`link-${item}`} className="app__flex p-text">
-            <div />
-            <a href={`#${item}`} key={item + index}>
-              {item}
-            </a>
-          </li>
-        ))}
+        {["home", "work", "skills", "contact", "testimonial", "about"].map(
+          (item, index) => (
+            <li key={`link-${item}`} className="app__flex p-text">
+              <div />
+              <a href={`#${item}`} key={item + index}>
+                {item}
+              </a>
+            </li>
+          )
+        )}
       </ul>
       <div className="app__navbar-menu">
         <HiMenuAlt4 onClick={() => setToogle(true)} />
@@ -33,7 +35,14 @@ const Navbar = () => {
           >
             <HiX onClick={() => setToogle(false)} />
             <ul>
-              {["home", "work", "skills", "contact", "about"].map((item) => (
+              {[
+                "home",
+                "work",
+                "skills",
+                "contact",
+                "testimonial",
+                "about",
+              ].map((item) => (
                 <li key={item}>
                   <a href={`#${item}`} onClick={() => setToogle(false)}>
                     {item}

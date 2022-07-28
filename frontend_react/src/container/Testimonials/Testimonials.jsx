@@ -30,7 +30,7 @@ const Testimonials = () => {
 
   return (
     <>
-      {/* {testimonials.length && (
+      {testimonials.length && (
         <>
           <div className="app__testimonial-item app__flex">
             <div className="app__flex">
@@ -72,7 +72,7 @@ const Testimonials = () => {
             </div>
           </div>
         </>
-      )} */}
+      )}
       <div className="app__testimonials-brands app__flex">
         {brands.map((brand) => (
           <motion.div
