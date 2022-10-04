@@ -33,6 +33,7 @@ const Work = () => {
       } else {
         setFilterWork(works.filter((work) => work.tags.includes(item)));
       }
+      // console.log(works.tags);
     }, 500);
   };
 
